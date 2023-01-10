@@ -24,12 +24,21 @@ nav > ul {
   flex-direction: row;
 }
 
+nav li {
+  text-shadow: 1px 1px 0px #569895;
+}
+
 nav li:first-of-type {
-  margin-right: 1.5rem;
+  margin-right: 2rem;
 }
 
 nav a {
   color: #fff;
   font-size: 1.3rem;
   font-weight: 800;
+}
+
+.active {
+  text-decoration: underline;
+  font-style: italic;
 }
