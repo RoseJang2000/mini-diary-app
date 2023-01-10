@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mini-diary-app/static/css/main.c8c82489.css",
+    "main.js": "/mini-diary-app/static/js/main.cf4f488d.js",
+    "index.html": "/mini-diary-app/index.html",
+    "main.c8c82489.css.map": "/mini-diary-app/static/css/main.c8c82489.css.map",
+    "main.cf4f488d.js.map": "/mini-diary-app/static/js/main.cf4f488d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c8c82489.css",
+    "static/js/main.cf4f488d.js"
+  ]
+}
