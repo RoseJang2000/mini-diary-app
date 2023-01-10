@@ -1,12 +1,17 @@
+import 'styles/TodoItem.css';
+import { AiOutlineCheck } from 'react-icons/ai';
+import { FaEdit } from 'react-icons/fa';
+import { ImBin } from 'react-icons/im';
+
 const TodoItem = ({ todo, onDeleteTodo, onToggleChecked, onToggleEdit, onEditTodo }) => {
   const { id, text, isChecked, isEdit } = todo;
   return (
-    <div className="todo_list">
+    <div className="todo_item">
       <div
         className={isChecked ? 'todo_checked' : 'todo_unchecked'}
         onClick={() => onToggleChecked(id)}
       >
-        {isChecked && 'Check'}
+        {isChecked && <AiOutlineCheck />}
       </div>
       {isEdit ? (
         <input
@@ -24,10 +29,10 @@ const TodoItem = ({ todo, onDeleteTodo, onToggleChecked, onToggleEdit, onEditTod
         <div className={isChecked ? 'todo_text_checked' : 'todo_text'}>{text}</div>
       )}
       <div className="todo_edit" onClick={() => onToggleEdit(id)}>
-        Edit
+        <FaEdit />
       </div>
       <div className="todo_delete" onClick={() => onDeleteTodo(id)}>
-        Del
+        <ImBin />
       </div>
     </div>
   );

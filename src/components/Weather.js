@@ -1,3 +1,4 @@
+import 'styles/Weather.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
@@ -18,32 +19,25 @@ const Weather = () => {
       temp_min: data.main.temp_min,
     });
   };
-  console.log(weatherData);
 
   useEffect(() => {
     getWeatherData();
   }, []);
 
   return (
-    <section className="weather_section">
+    <div className="weather_container">
       <h1>지금 서울의 날씨</h1>
-      <div>
-        <img src={weatherData.icon_src} alt="weather icon" />
-        <p>{weatherData.weather}</p>
-      </div>
-      <div>
-        <div>
+      <ul className="weather_data_wrapper">
+        <li className="weather_desc">
+          <img src={weatherData.icon_src} alt="weather icon" />
+          <p>{weatherData.weather}</p>
+        </li>
+        <li className="weather_temp">
           <p>{weatherData.temp} ℃</p>
           <p>체감온도 {weatherData.feels_like} ℃</p>
-        </div>
-        <div>
-          <>
-            <p>최저 {weatherData.temp_min} ℃</p>
-            <p>최고 {weatherData.temp_max} ℃</p>
-          </>
-        </div>
-      </div>
-    </section>
+        </li>
+      </ul>
+    </div>
   );
 };
 

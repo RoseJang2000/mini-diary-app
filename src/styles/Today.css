@@ -1,0 +1,17 @@
+.today_container {
+  background-color: #fff;
+  border-radius: 1rem;
+  width: 28rem;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.today_container > h1 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #111;
+}
+
+.today_container > p {
+  color: #777;
+}

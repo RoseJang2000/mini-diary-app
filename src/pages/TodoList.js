@@ -1,5 +1,7 @@
+import 'styles/TodoList.css';
 import { useState, useEffect } from 'react';
 import TodoItem from 'components/TodoItem';
+import { IoMdAdd } from 'react-icons/io';
 
 const TodoList = ({ todos, setTodos }) => {
   const [todoValue, setTodoValue] = useState('');
@@ -76,21 +78,21 @@ const TodoList = ({ todos, setTodos }) => {
   }, [todos]);
 
   return (
-    <>
-      <h1>My Todo List ({count})</h1>
-      <form className="App_input_wrapper" onSubmit={onAddTodo}>
+    <div className="todo_container">
+      <h1 className="todo_title">👉&nbsp;&nbsp;남은 할 일 {count}개</h1>
+      <form className="input_wrapper" onSubmit={onAddTodo}>
         <input
           type="text"
-          className="App_input"
+          className="todo_input"
           value={todoValue}
           placeholder="할 일 입력하기..."
           onChange={onChange}
         />
-        <div className="App_input_button" onClick={onAddTodo}>
-          Add
+        <div className="submit_button" onClick={onAddTodo}>
+          <IoMdAdd size={26} />
         </div>
       </form>
-      <div className="App_todo_list">
+      <div className="todo_list">
         {todos.map((todo) => (
           <TodoItem
             key={todo.id}
@@ -103,7 +105,7 @@ const TodoList = ({ todos, setTodos }) => {
         ))}
         {todos.length === 0 && <p className="empty">할 일을 추가해주세요!</p>}
       </div>
-    </>
+    </div>
   );
 };
 

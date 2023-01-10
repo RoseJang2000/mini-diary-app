@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
+import 'styles/App.css';
 import Home from './pages/Home';
 import TodoList from './pages/TodoList';
 import { useEffect, useState } from 'react';
@@ -25,13 +25,15 @@ function App() {
   }, [todos]);
 
   return (
-    <>
+    <div className="App">
       <Nav />
-      <Routes>
-        <Route path="/" element={<Home todos={todos} />} />
-        <Route path="/todo" element={<TodoList todos={todos} setTodos={setTodos} />} />
-      </Routes>
-    </>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home todos={todos} />} />
+          <Route path="/todo" element={<TodoList todos={todos} setTodos={setTodos} />} />
+        </Routes>
+      </main>
+    </div>
   );
 }
 
