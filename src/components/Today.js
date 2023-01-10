@@ -27,7 +27,14 @@ const Today = () => {
       '활기찬 마음으로 시작하는 멋진 하루 😍',
     ];
 
-    let random = Math.floor(Math.random() * (greets.length - 1));
+    let random;
+    let current;
+
+    while (current === random) {
+      random = Math.floor(Math.random() * (greets.length - 1));
+    }
+
+    current = random;
 
     setGreet(greets[random]);
   };
