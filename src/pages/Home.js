@@ -1,10 +1,13 @@
-import Weather from '../components/Weather';
+import CurrentTodos from 'components/CurrentTodos';
+import Weather from 'components/Weather';
 
-const Home = () => {
+const Home = ({ todos }) => {
   return (
-    <div>
+    <main>
+      Home
       <Weather />
-    </div>
+      <CurrentTodos todos={todos} />
+    </main>
   );
 };
 
