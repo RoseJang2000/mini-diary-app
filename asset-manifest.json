@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/mini-diary-app/static/css/main.c8c82489.css",
-    "main.js": "/mini-diary-app/static/js/main.cf4f488d.js",
+    "main.css": "/mini-diary-app/static/css/main.1790eb41.css",
+    "main.js": "/mini-diary-app/static/js/main.74dd0a73.js",
     "index.html": "/mini-diary-app/index.html",
-    "main.c8c82489.css.map": "/mini-diary-app/static/css/main.c8c82489.css.map",
-    "main.cf4f488d.js.map": "/mini-diary-app/static/js/main.cf4f488d.js.map"
+    "main.1790eb41.css.map": "/mini-diary-app/static/css/main.1790eb41.css.map",
+    "main.74dd0a73.js.map": "/mini-diary-app/static/js/main.74dd0a73.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8c82489.css",
-    "static/js/main.cf4f488d.js"
+    "static/css/main.1790eb41.css",
+    "static/js/main.74dd0a73.js"
   ]
 }
