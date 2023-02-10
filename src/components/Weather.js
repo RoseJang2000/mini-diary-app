@@ -26,7 +26,7 @@ const Weather = () => {
 
   return (
     <div className="weather_container">
-      <h1>지금 서울의 날씨</h1>
+      <h1>⛅️ 지금 서울의 날씨 ☀️</h1>
       <ul className="weather_data_wrapper">
         <li className="weather_desc">
           <img src={weatherData.icon_src} alt="weather icon" />

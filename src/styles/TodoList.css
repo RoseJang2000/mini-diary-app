@@ -21,6 +21,7 @@
   border-radius: 1rem;
   background-color: #fff;
   margin-bottom: 1rem;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .todo_input {
@@ -57,4 +58,28 @@
   color: #777;
   font-size: 1.5rem;
   margin-top: 13rem;
+}
+
+@media screen and (max-width: 949px) {
+  .todo_container {
+    padding: 2rem;
+  }
+
+  .todo_title {
+    width: 100%;
+  }
+
+  .input_wrapper {
+    width: 100%;
+  }
+
+  .todo_list {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 799px) {
+}
+
+@media screen and (max-width: 539px) {
 }

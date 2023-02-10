@@ -13,7 +13,7 @@ const CurrentTodos = ({ todos }) => {
 
   return (
     <div className="current_container">
-      <h1 className="current_title">남은 할 일</h1>
+      <h1 className="current_title">📚 남은 할 일</h1>
       <div className="current_todos">
         {currentTodos.map((currentTodo, idx) => (
           <div key={idx} className="current_todo_wrapper">

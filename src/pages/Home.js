@@ -6,10 +6,8 @@ import Today from 'components/Today';
 const Home = ({ todos }) => {
   return (
     <div className="home_container">
-      <div className="home_info">
-        <Today />
-        <Weather />
-      </div>
+      <Today />
+      <Weather />
       <CurrentTodos todos={todos} />
     </div>
   );

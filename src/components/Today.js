@@ -6,14 +6,14 @@ const Today = () => {
   const [greet, setGreet] = useState('');
 
   const getDate = () => {
-    const week = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+    const week = ['(일)', '(월)', '(화)', '(수)', '(목)', '(금)', '(토)'];
     const todayDate = new Date();
     const year = todayDate.getFullYear();
     const month = ('0' + (todayDate.getMonth() + 1)).slice(-2);
     const date = ('0' + todayDate.getDate()).slice(-2);
     const day = week[todayDate.getDay()];
 
-    setDate(`${year}년 ${month}월 ${date}일 ${day}`);
+    setDate(`📅 ${year}년 ${month}월 ${date}일 ${day}`);
   };
 
   const getWords = () => {

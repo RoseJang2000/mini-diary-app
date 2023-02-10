@@ -7,12 +7,12 @@ const Nav = () => {
       <h1 className="nav_title">web diary</h1>
       <ul>
         <li>
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" active="active">
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/todo" activeClassName="active">
+          <NavLink to="/todo" active="active">
             Todo List
           </NavLink>
         </li>

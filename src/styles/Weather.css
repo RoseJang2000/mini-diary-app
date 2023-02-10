@@ -21,6 +21,7 @@
   margin-top: 1rem;
   padding: 1rem;
   justify-content: center;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .weather_desc {
@@ -38,4 +39,28 @@
   align-items: center;
   font-size: 1.1rem;
   margin-bottom: 5px;
+}
+
+@media screen and (max-width: 949px) {
+  .weather_container {
+    width: 22rem;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .weather_container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  .weather_container > h1 {
+    font-size: 1.3rem;
+  }
+  .weather_desc {
+    font-size: 1.1rem;
+  }
+  .weather_temp {
+    font-size: 1rem;
+  }
 }
