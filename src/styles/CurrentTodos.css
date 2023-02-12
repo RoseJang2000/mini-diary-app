@@ -11,6 +11,7 @@
 
 .current_title {
   margin-bottom: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .current_todos {
@@ -73,6 +74,9 @@
   .current_container {
     width: 100%;
   }
+  .current_title {
+    font-size: 1.5rem;
+  }
   .current_todos {
     grid-template-columns: 100%;
     grid-template-rows: auto;
@@ -87,8 +91,8 @@
   }
 }
 
-@media screen and (max-width: 649px) {
-}
-
 @media screen and (max-width: 539px) {
+  .current_title {
+    font-size: 1.3rem;
+  }
 }
