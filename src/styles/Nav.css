@@ -42,8 +42,11 @@ nav a {
 }
 
 .active {
-  text-decoration: underline;
-  font-style: italic;
+  /* text-decoration: underline; */
+  /* font-style: italic; */
+  padding: 5px;
+  background-color: #569895;
+  border-radius: 40%;
 }
 
 @media screen and (max-width: 1599px) {
