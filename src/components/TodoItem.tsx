@@ -2,8 +2,15 @@ import 'styles/TodoItem.css';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { FaEdit } from 'react-icons/fa';
 import { ImBin } from 'react-icons/im';
+import { TodoItemProps } from 'interfaces/TodoList.interface';
 
-const TodoItem = ({ todo, onDeleteTodo, onToggleChecked, onToggleEdit, onEditTodo }) => {
+const TodoItem = ({
+  todo,
+  onDeleteTodo,
+  onToggleChecked,
+  onToggleEdit,
+  onEditTodo,
+}: TodoItemProps) => {
   const { id, text, isChecked, isEdit } = todo;
   return (
     <div className="todo_item">
@@ -26,7 +33,9 @@ const TodoItem = ({ todo, onDeleteTodo, onToggleChecked, onToggleEdit, onEditTod
           }}
         />
       ) : (
-        <div className={isChecked ? 'todo_text_checked' : 'todo_text'}>{text}</div>
+        <div className={isChecked ? 'todo_text_checked' : 'todo_text'}>
+          {text}
+        </div>
       )}
       <div className="todo_edit" onClick={() => onToggleEdit(id)}>
         <FaEdit />

@@ -3,9 +3,10 @@ import { IoIosArrowDroprightCircle } from 'react-icons/io';
 
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Todo } from 'interfaces/TodoList.interface';
 
-const CurrentTodos = ({ todos }) => {
-  const [currentTodos, setCurrentTodos] = useState([]);
+const CurrentTodos = ({ todos }: { todos: Todo[] }) => {
+  const [currentTodos, setCurrentTodos] = useState<Todo[]>([]);
 
   useEffect(() => {
     setCurrentTodos(todos.filter((todo) => !todo.isChecked).slice(0, 5));

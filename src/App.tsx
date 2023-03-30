@@ -4,15 +4,17 @@ import Home from './pages/Home';
 import TodoList from './pages/TodoList';
 import { useEffect, useState } from 'react';
 import Nav from './components/Nav';
+import { Todo } from 'interfaces/TodoList.interface';
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState<Todo[]>([]);
 
   const getTodos = () => {
-    let stored = JSON.parse(localStorage.getItem('todo'));
+    let stored = localStorage.getItem('todo');
 
     if (stored) {
-      setTodos(stored);
+      const parsedTodos = JSON.parse(stored);
+      setTodos(parsedTodos);
     }
   };
 
@@ -30,7 +32,10 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home todos={todos} />} />
-          <Route path="/todo" element={<TodoList todos={todos} setTodos={setTodos} />} />
+          <Route
+            path="/todo"
+            element={<TodoList todos={todos} setTodos={setTodos} />}
+          />
         </Routes>
       </main>
     </div>

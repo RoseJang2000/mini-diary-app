@@ -1,13 +1,14 @@
 import 'styles/TodoList.css';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import TodoItem from 'components/TodoItem';
 import { IoMdAdd } from 'react-icons/io';
+import { TodoListProps } from 'interfaces/TodoList.interface';
 
-const TodoList = ({ todos, setTodos }) => {
+const TodoList = ({ todos, setTodos }: TodoListProps) => {
   const [todoValue, setTodoValue] = useState('');
   const [count, setCount] = useState(0);
 
-  const onAddTodo = (event) => {
+  const onAddTodo = (event: any) => {
     event.preventDefault();
 
     const todoItem = {
@@ -23,7 +24,7 @@ const TodoList = ({ todos, setTodos }) => {
     }
   };
 
-  const onToggleChecked = (id) => {
+  const onToggleChecked = (id: number) => {
     let updatedTodos = todos.map((todo) => {
       if (todo.id === id) {
         todo.isChecked = !todo.isChecked;
@@ -34,12 +35,12 @@ const TodoList = ({ todos, setTodos }) => {
     setTodos(updatedTodos);
   };
 
-  const onDeleteTodo = (id) => {
+  const onDeleteTodo = (id: number) => {
     const filteredTodo = todos.filter((todo) => todo.id !== id);
     setTodos(filteredTodo);
   };
 
-  const onToggleEdit = (id) => {
+  const onToggleEdit = (id: number) => {
     const editTodos = todos.map((todo) => {
       if (todo.id === id) {
         todo.isEdit = !todo.isEdit;
@@ -50,7 +51,7 @@ const TodoList = ({ todos, setTodos }) => {
     setTodos(editTodos);
   };
 
-  const onEditTodo = (event, id) => {
+  const onEditTodo = (event: any, id: number) => {
     const editTodo = todos.map((todo) => {
       const {
         target: { value },
@@ -65,7 +66,7 @@ const TodoList = ({ todos, setTodos }) => {
     setTodos(editTodo);
   };
 
-  const onChange = (event) => {
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const {
       target: { value },
     } = event;
